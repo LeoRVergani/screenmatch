@@ -1,16 +1,21 @@
+import br.com.alura.screenmatch.modelos.Filme;
+
 public class Principal {
+
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.nome = "Avatar";
-        meuFilme.anoDeLancamento = 1950;
+        Filme favorito = new Filme();
 
-        meuFilme.exibiFilhaTecnica();
-        meuFilme.avalia(8);
-        meuFilme.avalia(6);
-        meuFilme.avalia(10);
-        meuFilme.avalia(2);
-        meuFilme.avalia(7);
+        favorito.setNome("The Matrix");
+        favorito.setAnoDeLancamento(1999);
+        favorito.setDuracaoEmMinutos(135);
+        favorito.setIncluidoNoPlano(true);
 
-        System.out.println(meuFilme.pegaMedia());
+        favorito.exibeFichaTecnica();
+        favorito.avalia(9);
+        favorito.avalia(8);
+        favorito.avalia(9);
+
+        System.out.println("Média de avaliações do filme: " +favorito.pegaMedia());
     }
+
 }
