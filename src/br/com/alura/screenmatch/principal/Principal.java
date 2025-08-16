@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -9,13 +11,12 @@ import java.util.ArrayList;
 public class Principal {
 
     public static void main(String[] args) {
-        Filme favorito = new Filme();
 
-        favorito.setNome("The Matrix");
-        favorito.setAnoDeLancamento(1999);
+        Filme favorito = new Filme("The Matrix", 1999);
+        //favorito.setAnoDeLancamento(1999);
         favorito.setDuracaoEmMinutos(135);
         favorito.setIncluidoNoPlano(true);
-        favorito.setAnoDeLancamento(23);
+        favorito.setAnoDeLancamento(2023);
 
         favorito.exibeFichaTecnica();
         favorito.avalia(9);
@@ -24,9 +25,9 @@ public class Principal {
 
         System.out.println("Média de avaliações do filme: " +favorito.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Seinfeld");
-        lost.setAnoDeLancamento(1996);
+        Serie lost = new Serie("Seinfeld", 1996);
+        //lost.setNome("Seinfeld");
+        //lost.setAnoDeLancamento(1996);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodioPorTemporada(10);
@@ -35,9 +36,8 @@ public class Principal {
         System.out.println(lost.getNome());
         System.out.println(lost.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2000);
+        Filme outroFilme = new Filme("Avatar", 2000);
+        //outroFilme.setAnoDeLancamento(2000);
         outroFilme.setDuracaoEmMinutos(250);
 
 
@@ -56,9 +56,9 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filra(episodio);
 
-        var filmeDoPaulo = new Filme();
-        filmeDoPaulo.setNome("Dogville");
-        filmeDoPaulo.setAnoDeLancamento(2003);
+        var filmeDoPaulo = new Filme("Dogville", 2003);
+        //filmeDoPaulo.setNome("Dogville");
+        //filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
         ArrayList<Filme> listDeFilmes = new ArrayList<>();
